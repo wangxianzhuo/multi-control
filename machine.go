@@ -29,7 +29,7 @@ func (m *Machine) RegisterAsEchoMiddleware(e *echo.Echo) {
 // NewMachine ...
 func NewMachine(endSign chan string) (*Machine, error) {
 	return &Machine{
-		unitEndChan: make(chan string, 1),
+		unitEndChan: endSign,
 	}, nil
 }
 

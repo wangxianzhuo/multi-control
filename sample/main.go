@@ -8,7 +8,7 @@ import (
 
 func main() {
 	e := echo.New()
-	m, err := control.NewMachine(make(chan string))
+	m, err := control.NewMachine(make(chan string, 1))
 	if err != nil {
 		panic(err)
 	}
